@@ -11,7 +11,9 @@ app.use(express.urlencoded({extended:true}));
 
 const routes = require('./server/routes/storeRoutes.js');
 app.use('/',routes);
-
+app.get('/',(req,res)=>{
+    res.send('Welcome to the dressStore application')
+})
 
 
 app.listen(port,()=> console.log(`Listening on port ${port}`));
